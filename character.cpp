@@ -9,6 +9,7 @@
 #include<QTime>
 #include"log.h"
 #include<thread>
+#include <QRandomGenerator>
 int scores=0;//全局分数
 Character::Character()
 {
@@ -16,7 +17,7 @@ Character::Character()
 Player::Player()
 {
     LastPlayerRect=QRect(Position.first*40,Position.second*40,40,40);
-    Mystia.load("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Mystia.png");
+    Mystia.load("Assets/Mystia.png");
     Mystia=Mystia.scaled(40,40);//这里不能单单写成Mystia.scaled(40,40),否则对象没被改变,我看这scaled也不是引用参数,是直接复制参数执行结束就销毁的函数啊
 }
 void Player::Update()//玩家的位置用pair存储分别代表x和y,接收W则y减1,接收S则y加1,接收A则x减一,接收D则x加1
@@ -125,11 +126,10 @@ void Customer::Update()
         timer=timer-16;//分析写在纸上 这timer不是QTimer 但是和mainwidget的timer->start(16)有着极大关联
         if(timer<=0)
         {
-            qsrand(static_cast<uint>(QTime::currentTime().msec()));//随机选择偏好,这里的qt随机数格式我抄网上的
-            int index=qrand()%static_cast<int>(Preferences.size());
-            CurrentRequest=Preferences[index];
-            addLog(QString::fromStdString(Name)+"想要"+QString::fromStdString(CurrentRequest)+"的酒水~");
-            timer=15000;//等待时间十五秒
+            int index = QRandomGenerator::global()->bounded(Preferences.size());
+            CurrentRequest = Preferences[index];
+            addLog(QString::fromStdString(Name) + "想要" + QString::fromStdString(CurrentRequest) + "的酒水~");
+            timer = 15000; // 等待时间十五秒
         }
     }
     else
