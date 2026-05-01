@@ -12,11 +12,11 @@ DrinkWidget::DrinkWidget(QWidget* parent):QWidget(parent)
     DrinkList.push_back(new Drink("冬酿",{"低酒精","可加冰","可加热","甘","古典"}));
     DrinkList.push_back(new Drink("果味SOUR",{"低酒精","可加冰","烧酒","鸡尾酒","水果","甘","苦"}));
     DrinkList.push_back(new Drink("大冰棍儿!",{"无酒精","甘","现代","提神"}));
-    DrinkList[0]->SetIcon("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/玉露茶.png");
-    DrinkList[1]->SetIcon("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/梅酒.png");
-    DrinkList[2]->SetIcon("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/冬酿.png");
-    DrinkList[3]->SetIcon("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/果味SOUR.png");
-    DrinkList[4]->SetIcon("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/大冰棍儿!.png");
+    DrinkList[0]->SetIcon("Assets/玉露茶.png");
+    DrinkList[1]->SetIcon("Assets/梅酒.png");
+    DrinkList[2]->SetIcon("Assets/冬酿.png");
+    DrinkList[3]->SetIcon("Assets/果味SOUR.png");
+    DrinkList[4]->SetIcon("Assets/大冰棍儿!.png");
 }
 void DrinkWidget::paintEvent(QPaintEvent* event)
 {
