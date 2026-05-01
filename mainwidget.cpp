@@ -26,18 +26,18 @@ MainWidget::MainWidget(QWidget* parent):QWidget(parent)
 {
     setFixedSize(800,500);
     setFocusPolicy(Qt::StrongFocus);//没有这玩意不行的,久经尝试发现了
-    Customer temp1(1,1,"Aya",vector<string>{"可加冰","高酒精","烧酒","提神"},"C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Aya.png");
-    Customer temp2(1,4,"Yuyuko",vector<string>{"高酒精","可加冰","鸡尾酒"},"C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Yuyuko.png");
-    Customer temp3(5,1,"Marisa",vector<string>{"可加冰","低酒精"},"C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Marisa.png");
-    Customer temp4(7,4,"Cirno",vector<string>{"水果","可加冰","甘"},"C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Cirno.png");
+    Customer temp1(1,1,"Aya",vector<string>{"可加冰","高酒精","烧酒","提神"},"Assets/Aya.png");
+    Customer temp2(1,4,"Yuyuko",vector<string>{"高酒精","可加冰","鸡尾酒"},"Assets/Yuyuko.png");
+    Customer temp3(5,1,"Marisa",vector<string>{"可加冰","低酒精"},"Assets/Marisa.png");
+    Customer temp4(7,4,"Cirno",vector<string>{"水果","可加冰","甘"},"Assets/Cirno.png");
     customers.push_back(temp1);
     customers.push_back(temp2);
     customers.push_back(temp3);
     customers.push_back(temp4);//添加人物
-    Table.load("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Table.png");
-    Chair.load("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Chair.png");
-    Bar.load("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Bar.png");
-    Cooker.load("C:/Users/DDdao/Desktop/MystiaIzakaya/MystiaIzakaya/Assets/Cooker.png");
+    Table.load("Assets/Table.png");
+    Chair.load("Assets/Chair.png");
+    Bar.load("Assets/Bar.png");
+    Cooker.load("Assets/Cooker.png");
     Table=Table.scaled(40,40);
     Chair=Chair.scaled(40,40);
     Bar=Bar.scaled(40,80);
